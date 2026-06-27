@@ -10,26 +10,16 @@
   <meta property="og:title"       content="TransCapital, Inc. — Asset Based Lending | San Diego, CA" />
   <meta property="og:description" content="Shannon Shular connects growing San Diego businesses with trusted asset-based lenders. AR lines, contract financing, and PO finance up to $10M. 25+ years experience." />
   <meta property="og:url"         content="https://transcapservices.com" />
-  <meta property="og:image"       content="https://transcapservices.com/og-image.jpg" />
   <meta property="og:site_name"   content="TransCapital, Inc." />
-  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:card"        content="summary" />
   <meta name="twitter:title"       content="TransCapital, Inc. — Asset Based Lending | San Diego" />
   <meta name="twitter:description" content="Shannon Shular connects San Diego businesses with trusted asset-based lenders. 25+ years. Lines $200K–$10M. Discreet, flexible, collateral-driven." />
-  <meta name="twitter:image"       content="https://transcapservices.com/og-image.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
 
-  <!-- Google Analytics 4 -->
-  <!-- REPLACE G-XXXXXXXXXX with your real Measurement ID from:
-       https://analytics.google.com → Admin → Data Streams → your stream -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
+  <!-- Google Analytics 4 — paste your real snippet here when ready -->
+  <!-- Get it from: analytics.google.com → Admin → Data Streams → your stream → "View tag instructions" -->
 
   <script type="application/ld+json">
   {
@@ -70,7 +60,7 @@
         "name": "What types of businesses do you work with?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We work with companies across manufacturing, distribution, staffing, government contracting, and international trade — typically businesses generating $500K to $20M+ in annual revenue that need working capital their bank can't provide."
+          "text": "We work with companies across manufacturing, distribution, staffing, government contracting, and international trade — typically businesses generating $1M to $30M+ in annual revenue that need working capital their bank can't provide."
         }
       },
       {
@@ -737,15 +727,10 @@
 
     .services-grid {
       display: grid;
-      grid-template-columns: 1.35fr 1fr;
-      grid-template-rows: auto auto;
+      grid-template-columns: repeat(2, 1fr);
       gap: 1.5px;
       background: rgba(200,164,86,.15);
       border: 1px solid rgba(200,164,86,.15);
-    }
-
-    .services-grid .service-card:first-child {
-      grid-row: 1 / 3;
     }
 
     .services-cannabis-note {
@@ -1194,19 +1179,15 @@
     }
 
     .testi-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      display: flex;
+      flex-wrap: wrap;
       gap: 1.5rem;
-    }
-
-    /* 5 cards in 3-col: center the final pair in the last row */
-    .testi-grid .testi-grid-card:nth-child(4) {
-      grid-column-start: 2;
-    }
+      justify-content: center;
     }
 
     .testi-grid-card {
-      background: rgba(8,22,43,.5);
+      flex: 0 0 calc(33.333% - 1rem);
+      background: var(--navy-mid);
       border: 1px solid rgba(200,164,86,.1);
       border-radius: 4px;
       padding: 2rem;
@@ -1530,11 +1511,6 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
-    }
-
-    /* 5 cards in 3-col grid: center the last pair in row 2 */
-    .industries-grid .industry-card:nth-child(4) {
-      grid-column-start: 2;
     }
 
     .industry-card {
@@ -2055,6 +2031,16 @@
       padding: .85rem;
     }
 
+    .form-privacy-note {
+      margin-top: 1rem;
+      font-size: .74rem;
+      color: rgba(26,44,71,.48);
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      line-height: 1.5;
+    }
+
     .form-success {
       display: none;
       text-align: center;
@@ -2200,6 +2186,85 @@
       white-space: nowrap;
     }
 
+    .footer-bottom-links {
+      font-size: .73rem;
+    }
+
+    .footer-bottom-links a {
+      color: rgba(255,255,255,.32);
+      transition: color .2s;
+    }
+
+    .footer-bottom-links a:hover { color: var(--gold); }
+
+    /* ============================================================
+       PRIVACY POLICY
+    ============================================================ */
+    #privacy {
+      background: var(--navy);
+      padding: 72px 2rem;
+      border-top: 1px solid rgba(200,164,86,.12);
+    }
+
+    .privacy-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .privacy-inner h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      color: var(--white);
+      margin-bottom: .5rem;
+    }
+
+    .privacy-inner .privacy-date {
+      font-size: .75rem;
+      color: rgba(255,255,255,.35);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      margin-bottom: 2.5rem;
+      display: block;
+    }
+
+    .privacy-inner h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--gold);
+      margin: 2rem 0 .6rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      font-family: var(--font-sans);
+    }
+
+    .privacy-inner p {
+      font-size: .88rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,.52);
+      margin-bottom: .75rem;
+    }
+
+    .privacy-inner ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: .75rem;
+    }
+
+    .privacy-inner ul li {
+      font-size: .88rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,.52);
+      padding-left: 1.25rem;
+      position: relative;
+    }
+
+    .privacy-inner ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      opacity: .6;
+    }
+
     /* ============================================================
        MOBILE STICKY CALL BAR
     ============================================================ */
@@ -2280,7 +2345,6 @@
       .bio-inner { grid-template-columns: 1fr; gap: 3rem; }
       .bio-monogram-block { position: static; }
       .services-grid { grid-template-columns: 1fr; }
-      .services-grid .service-card:first-child { grid-row: auto; }
       .why-grid { grid-template-columns: repeat(2, 1fr); }
       .why-grid-bottom { max-width: 100%; }
       .process-steps { grid-template-columns: 1fr 1fr; gap: 2rem; }
@@ -2288,8 +2352,6 @@
       .process-step:last-child { grid-column: span 2; max-width: 280px; margin: 0 auto; }
       .criteria-grid { grid-template-columns: repeat(2, 1fr); }
       .industries-grid { grid-template-columns: repeat(2, 1fr); }
-      .industries-grid .industry-card:nth-child(4) { grid-column-start: auto; }
-      .industries-grid .industry-card:nth-child(5) { grid-column: 1 / -1; max-width: calc(50% - 0.75rem); justify-self: center; }
       .cases-grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
       .banker-grid { grid-template-columns: 1fr 1fr; }
       .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
@@ -2314,11 +2376,10 @@
       .process-step:last-child { grid-column: auto; max-width: 100%; }
       .criteria-grid { grid-template-columns: 1fr; }
       .industries-grid { grid-template-columns: repeat(2, 1fr); }
-      .industries-grid .industry-card:nth-child(4) { grid-column-start: auto; }
       .cases-grid { grid-template-columns: 1fr; max-width: 100%; }
       .testimonials-featured { grid-template-columns: 1fr; }
       .testimonials-featured-bottom { grid-template-columns: 1fr; }
-      .testi-grid { grid-template-columns: 1fr; }
+      .testi-grid-card { flex: 0 0 100%; }
       .banker-grid { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
       .checkbox-group { grid-template-columns: 1fr; }
@@ -2859,35 +2920,13 @@
   </style>
   <!-- EmailJS — sends confirmation email directly to the submitter -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-<style id="editor-styles">
-  #editor-toolbar { position:fixed;top:0;left:0;right:0;z-index:99999;background:#0d1f3f;border-bottom:3px solid #c8a456;padding:12px 20px;display:flex;align-items:center;gap:12px;font-family:system-ui,sans-serif;box-shadow:0 4px 20px rgba(0,0,0,.5); }
-  .ed-title { color:#c8a456;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap; }
-  #btn-edit-toggle { padding:11px 22px;background:#c8a456;color:#07142a;border:none;border-radius:5px;font-size:15px;font-weight:700;cursor:pointer;white-space:nowrap; }
-  #btn-edit-toggle.editing { background:#e74c3c;color:#fff; }
-  #btn-save-file { padding:11px 22px;background:#27ae60;color:#fff;border:none;border-radius:5px;font-size:15px;font-weight:700;cursor:pointer;white-space:nowrap; }
-  #editor-status { font-size:13px;color:rgba(255,255,255,.8);white-space:nowrap;min-width:140px; }
-  #editor-hint { margin-left:auto;font-size:11px;color:rgba(255,255,255,.28);white-space:nowrap; }
-  body { padding-top:62px !important; }
-  body.edit-mode [data-editable] { outline:2px dashed #c8a456 !important;outline-offset:3px;border-radius:3px;cursor:text !important;min-height:1em; }
-  body.edit-mode [data-editable]:hover { background:rgba(200,164,86,.07) !important; }
-  body.edit-mode [data-editable]:focus { outline:3px solid #c8a456 !important;background:rgba(200,164,86,.11) !important; }
-</style>
 </head>
 <body>
-<div id="editor-toolbar">
-  <span class="ed-title">&#9998;&nbsp;Page Editor</span>
-  <button id="btn-edit-toggle" onclick="tcToggleEdit()">&#9998;&nbsp;&nbsp;Edit Page</button>
-  <button id="btn-save-file" onclick="tcSaveFile()">&#128190;&nbsp;&nbsp;Download File</button>
-  <span id="editor-status"></span>
-  <span id="editor-hint">Changes save automatically &bull; Download file sends to Craig</span>
-</div>
-
 
 <!-- ─── TOPBAR ─────────────────────────────────────────────────────────────── -->
 <div id="topbar">
   <div class="topbar-inner">
-    <span class="topbar-left" data-editable data-key="topbar-tagline">San Diego, California · Asset Based Lending</span>
+    <span class="topbar-left">San Diego, California · Asset Based Lending</span>
     <div class="topbar-right">
       <a href="tel:8584868800" class="topbar-link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.81 19.79 19.79 0 01.06 1.2 2 2 0 012.06 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
@@ -2937,11 +2976,11 @@
 <section id="hero">
   <div class="hero-inner">
     <div class="hero-text reveal">
-      <div class="hero-label" data-editable data-key="hero-label">Asset Based Lending · San Diego, CA</div>
-      <h1 class="hero-title" data-editable data-key="hero-title">
+      <div class="hero-label">Asset Based Lending · San Diego, CA</div>
+      <h1 class="hero-title">
         Capital for companies<br>banks leave <em>behind.</em>
       </h1>
-      <p class="hero-desc" data-editable data-key="hero-desc">Shannon Shular and TransCapital, Inc. have spent over 25 years connecting growing San Diego companies with the right lending partners — discreet, flexible, and built around your collateral, not your credit score.</p>
+      <p class="hero-desc">Shannon Shular and TransCapital, Inc. have spent over 25 years connecting growing San Diego companies with the right lending partners — discreet, flexible, and built around your specific financial conditions.</p>
       <div class="hero-actions">
         <a href="#contact" class="btn-primary">Request a Quote</a>
         <a href="#services" class="btn-ghost">View Programs</a>
@@ -2949,20 +2988,20 @@
     </div>
     <div class="hero-stats-card reveal reveal-delay-2">
       <div class="hero-stat">
-        <div class="hero-stat-value" data-editable data-key="stat-value-1">25+</div>
-        <div class="hero-stat-label" data-editable data-key="stat-label-1">Years in Business</div>
+        <div class="hero-stat-value">25+</div>
+        <div class="hero-stat-label">Years in Business</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-value" data-editable data-key="stat-value-2">$10M</div>
-        <div class="hero-stat-label" data-editable data-key="stat-label-2">Maximum Line Size</div>
+        <div class="hero-stat-value">$10M</div>
+        <div class="hero-stat-label">Maximum Line Size</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-value" data-editable data-key="stat-value-3">25+</div>
-        <div class="hero-stat-label" data-editable data-key="stat-label-3">Trusted Lender Partners</div>
+        <div class="hero-stat-value">25+</div>
+        <div class="hero-stat-label">Trusted Lender Partners</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-value" data-editable data-key="stat-value-4">100%</div>
-        <div class="hero-stat-label" data-editable data-key="stat-label-4">Discreet Structures</div>
+        <div class="hero-stat-value">100%</div>
+        <div class="hero-stat-label">Discreet Structures</div>
       </div>
     </div>
   </div>
@@ -3002,24 +3041,24 @@
 <section id="about">
   <div class="about-inner">
     <div class="about-left reveal">
-      <div class="section-label" data-editable data-key="section-label-1">About Shannon Shular</div>
-      <h2 class="section-title" data-editable data-key="section-title-1">Your guide through the lending market.</h2>
+      <div class="section-label">About Shannon Shular</div>
+      <h2 class="section-title">Your guide through the lending market.</h2>
       <img src="shannon.jpg" alt="Shannon Shular, President of TransCapital Inc." width="400" height="500" class="about-photo" />
-      <div class="about-quote" data-editable data-key="about-quote">
-        <p>"I've provided financing solutions for companies experiencing rapid growth and inconsistent credit conditions by increasing or supplementing their working capital, for over twenty-five years. My knowledge of the lending market guides businesses through the process of meeting trusted lending partners underwriting discreet and flexible financing structures."</p>
+      <div class="about-quote">
+        <p>"I've provided financing solutions for companies experiencing rapid growth and inconsistent credit conditions, for over twenty-five years. My knowledge of the lending market guides businesses through an efficient process of meeting vetted lending partners."</p>
         <cite>— Shannon Shular, President of TransCapital, Inc.</cite>
       </div>
     </div>
     <div class="about-right reveal reveal-delay-2">
-      <div class="about-pillar" data-editable data-key="about-pillar-1">
+      <div class="about-pillar">
         <h3>Collateral-Driven Capital</h3>
         <p>Asset Based Lenders focus on the quality of your collateral — receivables, inventory, purchase orders, or equipment — rather than balance sheet strength. This opens access to capital that traditional banks routinely deny to fast-growing, credit-challenged, or recently restructured companies.</p>
       </div>
-      <div class="about-pillar" data-editable data-key="about-pillar-2">
+      <div class="about-pillar">
         <h3>Discretion &amp; Relationships First</h3>
-        <p>Shannon's process is built around discretion and relationships. She matches your specific business profile to lenders from her trusted network who specialize in exactly your market. Paperwork only follows after genuine interest is established.</p>
+        <p>Shannon's process is built around discretion and relationships. She matches your specific business profile to lenders from her trusted network who specialize in your market. Paperwork only follows after genuine interest is established.</p>
       </div>
-      <div class="about-pillar" data-editable data-key="about-pillar-3">
+      <div class="about-pillar">
         <h3>Every Situation Has a Structure</h3>
         <p>Many lenders Shannon represents supplement existing bank capital to provide the lowest blended rate, while others lend exclusively to companies that don't qualify for traditional bank financing. Whatever your situation, there is a structure designed for you.</p>
       </div>
@@ -3031,31 +3070,30 @@
 <section id="services">
   <div class="services-inner">
     <div class="services-header reveal">
-      <div class="section-label" data-editable data-key="section-label-2">Programs &amp; Structures</div>
-      <h2 class="section-title" style="color:var(--white)" data-editable data-key="section-title-2">Financing structures designed for <em style="font-style:italic;color:var(--gold-light)">growth.</em></h2>
-      <p class="section-subtitle" style="color:rgba(255,255,255,.52);margin:1rem auto 0;text-align:center" data-editable data-key="section-subtitle-1">Discreet non-notification accounts receivable and inventory lines of credit — cost-effective alternatives to bank financing, tailored to the collateral your business generates.</p>
+      <div class="section-label">Programs &amp; Structures</div>
+      <h2 class="section-title" style="color:var(--white)">Financing structures designed for <em style="font-style:italic;color:var(--gold-light)">growth.</em></h2>
+      <p class="section-subtitle" style="color:rgba(255,255,255,.52);margin:1rem auto 0;text-align:center">Discreet non-notification accounts receivable and inventory lines of credit — cost-effective alternatives to bank financing, tailored to the collateral your business generates.</p>
     </div>
     <div class="services-grid">
 
       <div class="service-card reveal">
         <div class="service-badge">Most Popular</div>
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        <h3 class="service-title" data-editable data-key="service-title-1">Asset Based Lending</h3>
-        <p class="service-desc" data-editable data-key="service-desc-1">Non-notification AR and inventory advances that increase your available cash flow. Your customers continue paying as normal — all they see is your business operating confidently. Your line grows as your receivables grow.</p>
+        <h3 class="service-title">Asset Based Lending</h3>
+        <p class="service-desc">Non-notification AR and inventory advances that increase your available cash flow. Your customers continue paying as normal — all they see is your business operating confidently. Your line grows as your receivables grow.</p>
         <ul class="service-features">
           <li>Non-notification — completely discreet from customers</li>
           <li>Advances against accounts receivable and inventory</li>
           <li>Lines from $200,000 to $10,000,000</li>
           <li>Ideal for manufacturing, distribution &amp; wholesale</li>
-          <li>Scales automatically with your revenue growth</li>
         </ul>
       </div>
 
       <div class="service-card reveal reveal-delay-1">
         <div class="service-badge">Government Contracting Specialist</div>
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-        <h3 class="service-title" data-editable data-key="service-title-2">Contract Financing</h3>
-        <p class="service-desc" data-editable data-key="service-desc-2">Confidently fund payroll expenses with advances against government and commercial contracts that have not yet been invoiced. Shannon has deep relationships with lenders who specialize in the government contracting space.</p>
+        <h3 class="service-title">Contract Financing</h3>
+        <p class="service-desc">Confidently fund payroll expenses with advances against government and commercial contracts that have not yet been invoiced. Shannon has cultivated significant relationships with lenders who specialize in the government contracting and subcontractor lending space.</p>
         <ul class="service-features">
           <li>Payroll funded against un-invoiced contracts</li>
           <li>Designed for progress-billing businesses</li>
@@ -3067,8 +3105,8 @@
       <div class="service-card reveal reveal-delay-2">
         <div class="service-badge">Win Larger Orders</div>
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-        <h3 class="service-title" data-editable data-key="service-title-3">Purchase Order &amp; Production Finance</h3>
-        <p class="service-desc" data-editable data-key="service-desc-3">When a large order comes in and your working capital can't cover production costs, purchase order financing fills the gap. Make deposits to vendors, stay current on production expenses, and fulfill orders you'd otherwise have to decline.</p>
+        <h3 class="service-title">Purchase Order &amp; Production Finance</h3>
+        <p class="service-desc">When a large order or contract is awarded, covering production costs and making payroll can seem impossible. Fulfill orders you'd otherwise have to decline — with expense-specific advances that true up at shipment or when payment is received from your customer.</p>
         <ul class="service-features">
           <li>Vendor deposits funded before goods are produced</li>
           <li>Fulfill large orders from major retailers and clients</li>
@@ -3077,11 +3115,19 @@
         </ul>
       </div>
 
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-badge">Supply Chain & Inventory</div>
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        <h3 class="service-title">Materials Financing</h3>
+        <p class="service-desc">When you need to purchase raw materials, components, or inventory before production can begin, materials financing fills the gap — so you can take on larger orders without depleting working capital.</p>
+        <ul class="service-features">
+          <li>Advances against purchased materials and inventory</li>
+          <li>Fund raw material purchases before production begins</li>
+          <li>Bridge the gap between supplier payments and customer receipts</li>
+          <li>Ideal for manufacturers, importers, and wholesalers</li>
+        </ul>
+      </div>
 
-    </div>
-
-    <div class="services-cannabis-note reveal" data-editable data-key="cannabis-note">
-      <p>TransCapital also represents a specialized lender with deep experience in cannabis industry financing — including working capital solutions for some of the most recognized brands in the space.</p>
     </div>
 
   </div>
@@ -3091,38 +3137,38 @@
 <section id="why">
   <div class="why-inner">
     <div class="why-header reveal">
-      <div class="section-label" data-editable data-key="section-label-3">Why TransCapital</div>
-      <h2 class="section-title" data-editable data-key="section-title-3">The advantages of working with a specialist.</h2>
-      <p class="section-subtitle" style="text-align:center" data-editable data-key="section-subtitle-2">Most business owners waste months applying to lenders who aren't focused on their line size, industry, or collateral type. Shannon eliminates that friction.</p>
+      <div class="section-label">Why TransCapital</div>
+      <h2 class="section-title">The advantages of working with a specialist.</h2>
+      <p class="section-subtitle" style="text-align:center">Most business owners waste months applying to lenders who aren't focused on doing business with them. Shannon eliminates the excess time and paperwork, introducing clients to a streamlined process of meaningful introductions to lenders matched by industry type, financial condition, and line amount.</p>
     </div>
     <div class="why-grid">
-      <div class="why-card reveal" data-editable data-key="why-card-1">
+      <div class="why-card reveal">
         <div class="why-number">01</div>
         <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><line x1="12" y1="7" x2="5" y2="17"/><line x1="12" y1="7" x2="19" y2="17"/><line x1="5" y1="19" x2="19" y2="19"/></svg>
         <h3>Industry-Matched Lenders</h3>
         <p>Shannon's network includes lenders who specialize in your exact market — manufacturing, distribution, government contracting, and more. Working with a specialized lender means faster approvals and better terms.</p>
       </div>
-      <div class="why-card reveal reveal-delay-1" data-editable data-key="why-card-2">
+      <div class="why-card reveal reveal-delay-1">
         <div class="why-number">02</div>
         <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
         <h3>Complete Discretion</h3>
         <p>Non-notification structures mean your customers, suppliers, and competitors never know you're using a financing facility. Your business relationships stay intact throughout the process.</p>
       </div>
-      <div class="why-card reveal reveal-delay-2" data-editable data-key="why-card-3">
+      <div class="why-card reveal reveal-delay-2">
         <div class="why-number">03</div>
         <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
         <h3>Direct Access to Decision Makers</h3>
-        <p>Shannon doesn't introduce you to a call center — she connects you directly with the underwriting decision makers at each lender. Quick and decisive responses with professional integrity.</p>
+        <p>Shannon doesn't introduce you to a sales person or online platform — she connects you directly with the underwriting decision makers at each lender. Quick and decisive responses with professional integrity.</p>
       </div>
     </div>
     <div class="why-grid-bottom">
-      <div class="why-card reveal" data-editable data-key="why-card-4">
+      <div class="why-card reveal">
         <div class="why-number">04</div>
         <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><polyline points="9 15 11 17 15 13"/></svg>
         <h3>Documentation Only When It Counts</h3>
         <p>Document collection begins only after genuine rapport with a lender of interest has been established. You won't waste time gathering paperwork for a lender who isn't a fit.</p>
       </div>
-      <div class="why-card reveal reveal-delay-1" data-editable data-key="why-card-5">
+      <div class="why-card reveal reveal-delay-1">
         <div class="why-number">05</div>
         <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
         <h3>Ongoing Relationship, Not Just a Deal</h3>
@@ -3136,63 +3182,63 @@
 <section id="process">
   <div class="process-inner">
     <div class="process-header reveal">
-      <div class="section-label" data-editable data-key="section-label-4">Expedite the Process</div>
-      <h2 class="section-title" style="color:var(--white)" data-editable data-key="section-title-4">From conversation to capital — with purpose.</h2>
-      <p class="section-subtitle" style="color:rgba(255,255,255,.48);text-align:center" data-editable data-key="section-subtitle-3">Below is the important business profile criteria Shannon considers when sourcing a lender of interest to achieve the most competitive pricing and highest loan availability.</p>
+      <div class="section-label">Expedite the Process</div>
+      <h2 class="section-title" style="color:var(--white)">From conversation to capital — with purpose.</h2>
+      <p class="section-subtitle" style="color:rgba(255,255,255,.48);text-align:center">Below is the important business profile criteria Shannon considers when sourcing a lender of interest to achieve the most competitive pricing and highest loan availability.</p>
     </div>
     <div class="process-steps reveal">
       <div class="process-step">
         <div class="step-circle">1</div>
-        <div class="step-title" data-editable data-key="step-title-1">Business Profile</div>
-        <p class="step-desc" data-editable data-key="step-desc-1">Shannon learns your industry, revenue, collateral type, and financial situation in depth.</p>
+        <div class="step-title">Business Profile</div>
+        <p class="step-desc">Shannon learns your industry, revenue, collateral type, and financial situation in depth.</p>
       </div>
       <div class="process-step">
         <div class="step-circle">2</div>
-        <div class="step-title" data-editable data-key="step-title-2">Lender Match</div>
-        <p class="step-desc" data-editable data-key="step-desc-2">She identifies lenders from her trusted network who specialize in your exact market and line size.</p>
+        <div class="step-title">Lender Match</div>
+        <p class="step-desc">She identifies lenders from her trusted network who specialize in your exact market, collateral makeup, and line structure needed.</p>
       </div>
       <div class="process-step">
         <div class="step-circle">3</div>
-        <div class="step-title" data-editable data-key="step-title-3">Build Rapport</div>
-        <p class="step-desc" data-editable data-key="step-desc-3">Shannon establishes genuine interest with the right decision maker — before requesting any documents from you.</p>
+        <div class="step-title">Build Rapport</div>
+        <p class="step-desc">Shannon establishes genuine interest with the right decision makers — before requesting any documents from you.</p>
       </div>
       <div class="process-step">
         <div class="step-circle">4</div>
-        <div class="step-title" data-editable data-key="step-title-4">Documentation</div>
-        <p class="step-desc" data-editable data-key="step-desc-4">Once a lender of interest is confirmed, document collection begins in a streamlined, targeted way.</p>
+        <div class="step-title">Documentation</div>
+        <p class="step-desc">Once a lender of interest is confirmed, document collection begins in a streamlined, targeted way.</p>
       </div>
       <div class="process-step">
         <div class="step-circle">5</div>
-        <div class="step-title" data-editable data-key="step-title-5">Close &amp; Support</div>
-        <p class="step-desc" data-editable data-key="step-desc-5">Shannon follows the application through underwriting and remains engaged throughout the term of your facility.</p>
+        <div class="step-title">Close &amp; Support</div>
+        <p class="step-desc">Shannon follows the application through underwriting and remains engaged throughout the term of your facility.</p>
       </div>
     </div>
 
     <div class="criteria-divider"></div>
     <div class="criteria-label reveal">
-      <div class="section-label" data-editable data-key="section-label-5">Borrower Criteria</div>
+      <div class="section-label">Borrower Criteria</div>
       <h3>What determines the best lender for your business?</h3>
     </div>
     <div class="criteria-grid">
-      <div class="criteria-card reveal" data-editable data-key="criteria-card-1">
+      <div class="criteria-card reveal">
         <div class="criteria-num">01</div>
         <h4>Specific Industry Type</h4>
         <p>Why not partner with a lender who predominantly serves your business market? General types include manufacturing, distribution, wholesale, and those progress billing or performing service-based contracts. A specialized lender understands your billing cycles and prices accordingly.</p>
       </div>
-      <div class="criteria-card reveal reveal-delay-1" data-editable data-key="criteria-card-2">
+      <div class="criteria-card reveal reveal-delay-1">
         <div class="criteria-num">02</div>
         <h4>Revenue &amp; Line Amount</h4>
         <p>There are many pitfalls in choosing a lender that isn't focused on your core line amount. General lines fall between $200,000 and $10,000,000. Applying outside a lender's core profile increases cost and delays their process. Shannon ensures your request matches the lender's sweet spot.</p>
       </div>
-      <div class="criteria-card reveal reveal-delay-2" data-editable data-key="criteria-card-3">
+      <div class="criteria-card reveal reveal-delay-2">
         <div class="criteria-num">03</div>
         <h4>Collateral Supporting the Structure</h4>
         <p>Knowing a lender's appetite for specific collateral — and their conditions for lending against it — is valuable. Typical assets include AR, Inventory, Contracts, POs, and Projected Sales. Many lenders restrict availability against collateral outside of AR.</p>
       </div>
-      <div class="criteria-card reveal reveal-delay-3" data-editable data-key="criteria-card-4">
+      <div class="criteria-card reveal reveal-delay-3">
         <div class="criteria-num">04</div>
         <h4>Financial Condition of the Company</h4>
-        <p>Don't apply to lenders expecting financial strength when you lack it — or vice versa. Many lenders Shannon represents supplement existing bank capital for a blended rate. Many others lend exclusively to those who do not qualify for traditional bank financing.</p>
+        <p>Don't apply to lenders expecting financial strength when you lack it — or vice versa. Many lenders Shannon represents supplement existing bank capital for a blended rate. While others lend exclusively to those who do not qualify for traditional bank financing.</p>
       </div>
     </div>
   </div>
@@ -3202,27 +3248,27 @@
 <section id="testimonials">
   <div class="testimonials-inner">
     <div class="testimonials-header reveal">
-      <div class="section-label" data-editable data-key="section-label-6">Client Testimonials</div>
-      <h2 class="section-title" style="color:var(--white)" data-editable data-key="section-title-5">Trusted by CFOs, CEOs, and their bankers.</h2>
-      <p class="section-subtitle" style="color:rgba(255,255,255,.48);text-align:center" data-editable data-key="section-subtitle-4">Over 25 years of relationships across San Diego's manufacturing, distribution, government contracting, and construction communities.</p>
+      <div class="section-label">Client Testimonials</div>
+      <h2 class="section-title" style="color:var(--white)">Trusted by CEO's, CFO's, and their bankers.</h2>
+      <p class="section-subtitle" style="color:rgba(255,255,255,.48);text-align:center">Over 25 years of relationships across San Diego's manufacturing, distribution, government contracting, and construction communities.</p>
     </div>
 
     <div class="testimonials-featured reveal">
       <div class="testi-card featured">
         <div class="testi-quote-mark">"</div>
-        <div class="testi-badge" data-editable data-key="testi-badge-1">📈 Triple Revenue Projected · $1.5M Line</div>
-        <p class="testi-text" data-editable data-key="testi-text-1">I plan to triple my annual sales since working with the lender Shannon recommended. I wasn't able to qualify for the bank loan I needed to bid larger contracts or take on new work as it was presenting itself. I was referred to Shannon by my banker and didn't realize the relief an AR LOC would provide my business when it came to managing cash flow. I had factored many years ago and didn't like the experience my customers received and the fees were very expensive. The lender I'm using now is increasing my line to $1.5M and also provided our business with 'proof of capital' required to bid larger contracts.</p>
+        <div class="testi-badge">📈 Triple Revenue Projected · $1.5M Line</div>
+        <p class="testi-text">I plan to triple my annual sales since working with the lender Shannon recommended. I wasn't able to qualify for the bank loan I needed to bid larger contracts or take on new work as it was presenting itself. I was referred to Shannon by my banker and didn't realize the relief an AR LOC would provide my business when it came to managing cash flow. I had factored many years ago and didn't like the experience my customers received and the fees were very expensive. The lender I'm using now is increasing my line to $1.5M and also provided our business with 'proof of capital' required to bid larger contracts.</p>
         <div class="testi-meta">
-          <div class="testi-name" data-editable data-key="testi-name-1">Dave Guaderrama</div>
-          <div class="testi-role" data-editable data-key="testi-role-1">CEO, NMS Management</div>
+          <div class="testi-name">Dave Guaderrama</div>
+          <div class="testi-role">CEO, NMS Management</div>
         </div>
       </div>
       <div class="testi-card featured">
         <div class="testi-quote-mark">"</div>
-        <p class="testi-text" data-editable data-key="testi-text-2">As the CFO for a couple of San Diego companies Shannon's helped with financing over the years, I can say she's been instrumental in financing growth particularly when the banks weren't. As these companies worked with high profile clients, we needed to be discreet when choosing a solution allowing a favorable method of collecting customer payments which we were unable to obtain in the market on our own. Access to decision makers was key to confidently implementing a growth-oriented financing plan to meet our goals. Shannon and her network of lenders were focused on quick and decisive responses with professional integrity. I would recommend her to anyone seeking alternatives to bank financing.</p>
+        <p class="testi-text">As the CFO for a couple of San Diego companies Shannon's helped with financing over the years, I can say she's been instrumental in financing growth particularly when the banks weren't. Since we work with high profile clients, we needed to be discreet when choosing a solution. Access to decision makers was key to confidently implement a growth-oriented financing plan to meet our goals. Shannon and her network of lenders were focused on quick and decisive responses with professional integrity. I would recommend her to anyone seeking alternatives to bank financing.</p>
         <div class="testi-meta">
-          <div class="testi-name" data-editable data-key="testi-name-2">John Teotico</div>
-          <div class="testi-role" data-editable data-key="testi-role-2">CFO, San Diego, CA</div>
+          <div class="testi-name">John Teotico</div>
+          <div class="testi-role">CFO, San Diego, CA</div>
         </div>
       </div>
     </div>
@@ -3230,29 +3276,29 @@
     <div class="testimonials-featured-bottom reveal">
       <div class="testi-card">
         <div class="testi-quote-mark">"</div>
-        <div class="testi-badge" data-editable data-key="testi-badge-2">📈 +$3.5M Revenue Growth</div>
-        <p class="testi-text" data-editable data-key="testi-text-3">A great deal of our growth is in part to asset based lending — we have added three new clients increasing our sales by $3.5M. Not to mention two of our key suppliers have increased our credit limits and terms. Our clients demand competitive pricing and credit of up to 75 days. The lender you introduced is responsible for us meeting these goals. Thank you Shannon for everything.</p>
+        <div class="testi-badge">📈 +$3.5M Revenue Growth</div>
+        <p class="testi-text">A great deal of our growth is in part to asset based lending — we have added three new clients increasing our sales by $3.5M. Not to mention two of our key suppliers have increased our credit limits and terms since paying more promptly. Our clients demand competitive pricing and credit of up to 75 days. The lender you introduced is responsible for us meeting these goals. Thank you Shannon for everything.</p>
         <div class="testi-meta">
-          <div class="testi-name" data-editable data-key="testi-name-3">Jorge Culebro</div>
-          <div class="testi-role" data-editable data-key="testi-role-3">CFO, Right Hand Synergy &amp; Mfg.</div>
+          <div class="testi-name">Jorge Culebro</div>
+          <div class="testi-role">CFO, Right Hand Synergy &amp; Mfg.</div>
         </div>
       </div>
       <div class="testi-card">
         <div class="testi-quote-mark">"</div>
-        <div class="testi-badge" data-editable data-key="testi-badge-3">🤝 Client since 1999</div>
-        <p class="testi-text" data-editable data-key="testi-text-4">Ms. Shannon Shular and TransCapital have been helping us with financing for working capital since 1999. What I appreciate the most is that she understands our requirements fully and then presents the plan. She does not just find a suitable lender — she follows up our application with their underwriting team all the way through, and that makes a world of difference. Despite her busy schedule, she schedules regular meetings and calls throughout the term.</p>
+        <div class="testi-badge">🤝 Client since 1999</div>
+        <p class="testi-text">Ms. Shannon Shular and TransCapital have been helping us with financing for working capital since 1999. What I appreciate the most is that she understands our requirements fully and then presents the plan. She does not just find a suitable lender — she follows our application with their underwriting team all the way through, and that makes a world of difference. Despite her busy schedule, she schedules regular meetings and stays committed to the process.</p>
         <div class="testi-meta">
-          <div class="testi-name" data-editable data-key="testi-name-4">Ash Shah</div>
-          <div class="testi-role" data-editable data-key="testi-role-4">CEO, Rasix Computer Center, Inc.</div>
+          <div class="testi-name">Ash Shah</div>
+          <div class="testi-role">CEO, Rasix Computer Center, Inc.</div>
         </div>
       </div>
       <div class="testi-card">
         <div class="testi-quote-mark">"</div>
-        <div class="testi-badge" data-editable data-key="testi-badge-4">📈 +30% Revenue Growth</div>
-        <p class="testi-text" data-editable data-key="testi-text-5">Shannon introduced the owners of a finance company to support our production expenses on large orders to Home Depot when the banks said no. Our 2015 sales revenue increased by over 30% and I continue to draw on the term loan to confidently fund my company.</p>
+        <div class="testi-badge">📈 +30% Revenue Growth</div>
+        <p class="testi-text">Shannon introduced a finance company to support our production expenses on large orders to Home Depot when the banks said no. Our 2015 sales revenue increased by over 30% and I continue to draw on the loan to confidently fund my company.</p>
         <div class="testi-meta">
-          <div class="testi-name" data-editable data-key="testi-name-5">David Martinez</div>
-          <div class="testi-role" data-editable data-key="testi-role-5">CEO, AGRI-TECH INDUSTRIES LLC</div>
+          <div class="testi-name">David Martinez</div>
+          <div class="testi-role">CEO, AGRI-TECH INDUSTRIES LLC</div>
         </div>
       </div>
     </div>
@@ -3260,42 +3306,42 @@
     <div class="testi-grid reveal">
       <div class="testi-grid-card">
         <div class="testi-quote-mark">"</div>
-        <p class="testi-text" data-editable data-key="testi-text-6">We were looking for financing options and introduced to Shannon at TransCapital. The lender Shannon introduced worked perfectly for us and we continue to call on her as new opportunities arise. We found Shannon to be credible, professional and very knowledgeable about the various instruments of borrowing in the market.</p>
+        <p class="testi-text">We were looking for financing options and introduced to Shannon at TransCapital. The lender Shannon introduced worked perfectly for us and we continue to call on her as new opportunities arise. We found Shannon to be credible, professional and very knowledgeable about the various instruments of borrowing in the market.</p>
         <div class="testi-meta">
-          <div class="testi-name" data-editable data-key="testi-name-6">T. Maher</div>
-          <div class="testi-role" data-editable data-key="testi-role-6">President &amp; CEO, PCS Adventures</div>
+          <div class="testi-name">T. Maher</div>
+          <div class="testi-role">President &amp; CEO, PCS Adventures</div>
         </div>
       </div>
       <div class="testi-grid-card">
         <div class="testi-quote-mark">"</div>
-        <p class="testi-text" data-editable data-key="testi-text-7">The ability to draw on capital as needed has been instrumental in our ability to fund new growth, while relieving the pressure of cash flow constraints during lean periods throughout the year. We've known and trusted Shannon's guidance to practical capital resources for many years.</p>
+        <p class="testi-text">The ability to draw on capital as needed has been instrumental in our ability to fund new growth, while relieving the pressure of cash flow constraints during lean periods throughout the year. We've known and trusted Shannon's guidance to practical capital resources for many years.</p>
         <div class="testi-meta">
-          <div class="testi-name" data-editable data-key="testi-name-7">R. Renfro</div>
-          <div class="testi-role" data-editable data-key="testi-role-7">President, SCI</div>
+          <div class="testi-name">R. Renfro</div>
+          <div class="testi-role">President, SCI</div>
         </div>
       </div>
       <div class="testi-grid-card">
         <div class="testi-quote-mark">"</div>
-        <p class="testi-text" data-editable data-key="testi-text-8">Everything has been great so far, much easier than I ever thought it would be. I want to thank you for getting me setup. This has really helped my business increase sales by keeping my inventory levels up. Once again, thank you.</p>
+        <p class="testi-text">Everything has been great so far, much easier than I ever thought it would be. I want to thank you for getting me setup. This has really helped my business increase sales by keeping my inventory levels up. Once again, thank you.</p>
         <div class="testi-meta">
-          <div class="testi-name" data-editable data-key="testi-name-8">G. Roney</div>
-          <div class="testi-role" data-editable data-key="testi-role-8">President, Next Day Specialty</div>
+          <div class="testi-name">G. Roney</div>
+          <div class="testi-role">President, Next Day Specialty</div>
         </div>
       </div>
       <div class="testi-grid-card">
         <div class="testi-quote-mark">"</div>
-        <p class="testi-text" data-editable data-key="testi-text-9">As a management consultant I have often had clients with cash flow needs. Shannon Shular is the best. She really understands client cash flow constraints and knows where to go to get viable solutions.</p>
+        <p class="testi-text">As a management consultant I have often had clients with cash flow needs. Shannon Shular is the best. She really understands client cash flow constraints and knows where to go to get viable solutions.</p>
         <div class="testi-meta">
-          <div class="testi-name" data-editable data-key="testi-name-9">P. Laven</div>
-          <div class="testi-role" data-editable data-key="testi-role-9">Management Consultant</div>
+          <div class="testi-name">P. Laven</div>
+          <div class="testi-role">Management Consultant</div>
         </div>
       </div>
       <div class="testi-grid-card">
         <div class="testi-quote-mark">"</div>
-        <p class="testi-text" data-editable data-key="testi-text-10">When it comes to alternative lending options Shannon knows the business better than anyone out there and has always been an excellent resource to my clients. She always provides a competitive solution that clients can use to supplement, replace, or create additional working capital.</p>
+        <p class="testi-text">When it comes to alternative lending options Shannon knows the business better than anyone out there and has always been an excellent resource to my clients. She always provides a competitive solution that clients can use to supplement, replace, or create additional working capital.</p>
         <div class="testi-meta">
-          <div class="testi-name" data-editable data-key="testi-name-10">Matthew Varela</div>
-          <div class="testi-role" data-editable data-key="testi-role-10">Business Performance Advisor, San Diego</div>
+          <div class="testi-name">Matthew Varela</div>
+          <div class="testi-role">Business Performance Advisor, San Diego</div>
         </div>
       </div>
     </div>
@@ -3310,26 +3356,26 @@
         <svg class="banker-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         <span>Endorsed by San Diego's Commercial Banking Community</span>
       </div>
-      <h2 class="section-title" data-editable data-key="section-title-6">When banks refer out, they refer to Shannon.</h2>
-      <p class="section-subtitle" data-editable data-key="section-subtitle-5">These aren't just client testimonials — they're endorsements from the commercial bankers who refer clients to Shannon when they can't help them themselves.</p>
+      <h2 class="section-title">When banks refer out, they refer to Shannon.</h2>
+      <p class="section-subtitle">These aren't just client testimonials — they're endorsements from the commercial bankers who refer clients to Shannon when they can't help them themselves.</p>
     </div>
     <div class="banker-divider"></div>
     <div class="banker-grid reveal">
       <div class="banker-card">
         <div class="banker-quote-mark">"</div>
-        <p class="banker-text" data-editable data-key="banker-text-1">Without hesitation, I have and will continue to recommend Shannon into companies that have credit requests just outside of the commercial banking plate. Over the many years I have known and worked with Shannon, I have seen first-hand how her integrity and expertise have helped San Diego companies finance payroll and working capital needs, especially related to the government contracting space.</p>
+        <p class="banker-text">Without hesitation, I have and will continue to recommend Shannon into companies that have credit requests just outside of the commercial banking plate. Over the many years I have known and worked with Shannon, I have seen first-hand how her integrity and expertise have helped San Diego companies finance payroll and working capital needs, especially related to the government contracting space.</p>
         <div class="banker-meta-divider"></div>
-        <div class="banker-name" data-editable data-key="banker-name-1">Steve Lopez</div>
-        <div class="banker-title" data-editable data-key="banker-title-1">VP &amp; Senior Relationship Manager</div>
-        <div class="banker-institution" data-editable data-key="banker-institution-1">City National Bank · La Jolla</div>
+        <div class="banker-name">Steve Lopez</div>
+        <div class="banker-title">VP &amp; Senior Relationship Manager</div>
+        <div class="banker-institution">City National Bank · La Jolla</div>
       </div>
       <div class="banker-card">
         <div class="banker-quote-mark">"</div>
-        <p class="banker-text" data-editable data-key="banker-text-2">I've worked with Shannon since 1995. She has been a terrific resource providing alternative lending options for companies needing creativity. She's responsive and presents clients with excellent options to meet their immediate cash flow requirements.</p>
+        <p class="banker-text">I've worked with Shannon since 1995. She has been a terrific resource providing alternative lending options for companies needing creativity. She's responsive and presents clients with excellent options to meet their immediate cash flow requirements.</p>
         <div class="banker-meta-divider"></div>
-        <div class="banker-name" data-editable data-key="banker-name-2">M. Spacciapolli</div>
-        <div class="banker-title" data-editable data-key="banker-title-2">Regional Manager, Commercial Lending</div>
-        <div class="banker-institution" data-editable data-key="banker-institution-2">First Citizens Bank</div>
+        <div class="banker-name">M. Spacciapolli</div>
+        <div class="banker-title">Regional Manager, Commercial Lending</div>
+        <div class="banker-institution">First Citizens Bank</div>
       </div>
     </div>
   </div>
@@ -3340,9 +3386,9 @@
   <div class="bio-inner">
     <div class="bio-monogram-block reveal">
       <div class="bio-monogram"><span>SS</span></div>
-      <div class="bio-name-plate" data-editable data-key="bio-name">
+      <div class="bio-name-plate">
         <div class="bio-name">Shannon Shular</div>
-        <div class="bio-title-tag" data-editable data-key="bio-title">President · TransCapital, Inc.</div>
+        <div class="bio-title-tag">President · TransCapital, Inc.</div>
       </div>
       <div class="bio-contact-pills">
         <a href="tel:8584868800" class="bio-pill">
@@ -3356,21 +3402,21 @@
       </div>
     </div>
     <div class="bio-content reveal reveal-delay-2">
-      <div class="section-label" data-editable data-key="section-label-7">Meet Shannon Shular</div>
-      <h2 class="section-title" data-editable data-key="section-title-7">Twenty-five years of relationships that open doors.</h2>
+      <div class="section-label">Meet Shannon Shular</div>
+      <h2 class="section-title">Twenty-five years of relationships that open doors.</h2>
       <div class="bio-credentials">
-        <span class="bio-credential-pill" data-editable data-key="bio-pill-1">Founded 1995</span>
-        <span class="bio-credential-pill" data-editable data-key="bio-pill-2">25+ Years Active</span>
-        <span class="bio-credential-pill" data-editable data-key="bio-pill-3">$200K – $10M Lines</span>
-        <span class="bio-credential-pill" data-editable data-key="bio-pill-4">San Diego, CA</span>
+        <span class="bio-credential-pill">Founded 1995</span>
+        <span class="bio-credential-pill">25+ Years Active</span>
+        <span class="bio-credential-pill">$200K – $10M Lines</span>
+        <span class="bio-credential-pill">San Diego, CA</span>
       </div>
-      <div class="bio-paragraphs" data-editable data-key="bio-paragraphs">
-        <p>Shannon Shular has spent more than twenty-five years working at the intersection of business need and lending expertise. Based in San Diego, she founded TransCapital Services in 1995 with a straightforward mission: help growing companies find the capital their banks couldn't provide.</p>
+      <div class="bio-paragraphs">
+        <p>Shannon Shular has spent more than twenty-five years working at the intersection of business growth strategies and lending expertise. Based in San Diego, she founded TransCapital in 1995 with a straightforward mission: help growing companies find the capital their banks couldn't provide.</p>
         <p>Her approach is personal and methodical. Before any paperwork is requested, Shannon takes time to understand your business — your industry, your collateral, your financial situation, and your goals. Only then does she reach into her network of trusted lenders and make the right introduction.</p>
         <div class="bio-pull-quote">
           <p>"Choosing a trusted lending partner can be expedited with my help. My goal is to introduce the right decision maker within my network first, with a strong understanding and commitment to your business profile."</p>
         </div>
-        <p>Shannon has helped companies across manufacturing, distribution, government contracting, construction, and cannabis access capital that transformed their growth trajectories. Her clients include CFOs and CEOs of companies ranging from $1M to $20M+ in annual revenue.</p>
+        <p>Shannon has helped companies across manufacturing, distribution, government contracting, construction, and cannabis access capital that transformed their growth trajectories. Her clients include companies ranging from $1M to $70M+ in annual revenue.</p>
       </div>
     </div>
   </div>
@@ -3380,40 +3426,46 @@
 <section id="industries">
   <div class="industries-inner">
     <div class="industries-header reveal">
-      <div class="section-label" data-editable data-key="section-label-8">Sector Expertise</div>
-      <h2 class="section-title" data-editable data-key="section-title-8">Industries we serve.</h2>
-      <p class="section-subtitle" style="text-align:center" data-editable data-key="section-subtitle-6">TransCapital has placed financing structures across a wide range of industries. If your business generates receivables, contracts, purchase orders, or inventory — there's likely a structure that fits.</p>
+      <div class="section-label">Sector Expertise</div>
+      <h2 class="section-title">Industries we serve.</h2>
+      <p class="section-subtitle" style="text-align:center">TransCapital has placed financing structures across a wide range of industries. If your business generates receivables, contracts, purchase orders, or D2C sales — there's likely a structure that fits.</p>
     </div>
     <div class="industries-grid">
 
-      <div class="industry-card reveal" data-editable data-key="industry-card-1">
+      <div class="industry-card reveal">
         <svg class="industry-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
         <h3>Manufacturing</h3>
         <p>We help manufacturers pull working capital out of receivables and inventory to fund production cycles, hire, and fulfill larger orders — without waiting on slow-paying customers.</p>
       </div>
 
-      <div class="industry-card reveal reveal-delay-1" data-editable data-key="industry-card-2">
+      <div class="industry-card reveal reveal-delay-1">
         <svg class="industry-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
         <h3>Distribution &amp; Wholesale</h3>
-        <p>Asset-based lines scale with your receivables as your distribution volume grows, without the constraints of traditional credit limits.</p>
+        <p>Asset-based lines scale with your receivables as your sales volume increases, without the constraints of traditional credit limits.</p>
       </div>
 
-      <div class="industry-card reveal reveal-delay-2" data-editable data-key="industry-card-3">
+      <div class="industry-card reveal reveal-delay-2">
         <svg class="industry-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><polyline points="5 22 5 11 3 11 12 3 21 11 19 11 19 22"/><path d="M9 22v-7h6v7"/></svg>
         <h3>Government Contractors</h3>
-        <p>Contract financing funds payroll on government and commercial contracts before invoices are issued, so you never have to turn down a bid.</p>
+        <p>Contract financing funds payroll and subcontractors on government and commercial contracts before invoices are issued, so you never have to turn down a bid.</p>
       </div>
 
-      <div class="industry-card reveal" data-editable data-key="industry-card-4">
+      <div class="industry-card reveal">
         <svg class="industry-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M4 20V10l8-6 8 6v10"/><path d="M9 20v-5h6v5"/><path d="M12 7v3"/></svg>
         <h3>Construction</h3>
-        <p>Construction companies can bridge the gap between project milestones and slow-paying contracts, keeping crews on the job and cash flow steady.</p>
+        <p>Construction companies can bridge the gap between project milestones and slow-paying contracts, keeping crews on the job, vendors paid, and cash flow steady.</p>
       </div>
 
-      <div class="industry-card reveal reveal-delay-1" data-editable data-key="industry-card-5">
-        <svg class="industry-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 00-6.88 17.22C6.18 20.5 7 21.5 7 22h10c0-.5.82-1.5 1.88-2.78A10 10 0 0012 2z"/><path d="M12 6v4"/><path d="M8.5 9.5l2.5 2"/><path d="M15.5 9.5l-2.5 2"/></svg>
+      <div class="industry-card reveal reveal-delay-1">
+        <svg class="industry-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
         <h3>Cannabis</h3>
         <p>Shannon represents a specialized lender with an established track record in cannabis industry financing. Asset-based working capital solutions for licensed operators — including some of the most recognized brands in the space.</p>
+      </div>
+
+      <div class="industry-card reveal reveal-delay-2">
+        <svg class="industry-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        <h3>Staffing &amp; Services</h3>
+        <p>Staffing and service companies can bridge the gap between payroll obligations and slow client payment cycles — keeping operations running without taking on high-cost debt.</p>
       </div>
 
     </div>
@@ -3424,13 +3476,13 @@
 <section id="case-studies">
   <div class="cases-inner">
     <div class="cases-header reveal">
-      <div class="section-label" data-editable data-key="section-label-9">Deal Snapshots</div>
-      <h2 class="section-title" style="color:var(--white)" data-editable data-key="section-title-9">What we've helped businesses accomplish.</h2>
-      <p class="section-subtitle" style="color:rgba(255,255,255,.48);text-align:center" data-editable data-key="section-subtitle-7">Representative examples of financing structures arranged by TransCapital. Details have been generalized.</p>
+      <div class="section-label">Deal Snapshots</div>
+      <h2 class="section-title" style="color:var(--white)">What we've helped businesses accomplish.</h2>
+      <p class="section-subtitle" style="color:rgba(255,255,255,.48);text-align:center">Representative examples of financing structures arranged by TransCapital. Details have been generalized.</p>
     </div>
     <div class="cases-grid">
 
-      <div class="case-card reveal" data-editable data-key="case-card-1">
+      <div class="case-card reveal">
         <div class="case-industry-tag">Government Contracting</div>
         <h3>Payroll funded before the first invoice</h3>
         <div class="case-label">Challenge</div>
@@ -3444,7 +3496,7 @@
       </div>
 
 
-      <div class="case-card reveal reveal-delay-1" data-editable data-key="case-card-2">
+      <div class="case-card reveal reveal-delay-1">
         <div class="case-industry-tag">Distribution</div>
         <h3>A $1.5M line that grew with the business</h3>
         <div class="case-label">Challenge</div>
@@ -3457,13 +3509,13 @@
         </div>
       </div>
 
-      <div class="case-card reveal reveal-delay-2" data-editable data-key="case-card-3">
+      <div class="case-card reveal reveal-delay-2">
         <div class="case-industry-tag">Manufacturing</div>
         <h3>PO financing turned a major retail order into a growth catalyst</h3>
         <div class="case-label">Challenge</div>
         <p class="case-text">A San Diego manufacturer received a large order from a national retailer but lacked working capital to fund production — their bank had declined additional credit despite the confirmed order on hand.</p>
         <div class="case-label">Solution</div>
-        <p class="case-text">Shannon arranged purchase order financing to cover vendor deposits and production costs, allowing the company to fulfill the contract and establish an ongoing retail relationship.</p>
+        <p class="case-text">Shannon arranged purchase order financing to cover vendor deposits and production costs, allowing the company to fulfill the contract and establish an ongoing relationship.</p>
         <div class="case-metric-block">
           <div class="case-metric-value">+30%</div>
           <div class="case-metric-label">Revenue growth that year</div>
@@ -3478,9 +3530,9 @@
 <section id="faq">
   <div class="faq-inner">
     <div class="faq-header reveal">
-      <div class="section-label" data-editable data-key="section-label-10">Common Questions</div>
-      <h2 class="section-title" data-editable data-key="section-title-10">What you need to know.</h2>
-      <p class="section-subtitle" style="text-align:center" data-editable data-key="section-subtitle-8">Straightforward answers to the most common questions about asset-based lending and working with TransCapital.</p>
+      <div class="section-label">Common Questions</div>
+      <h2 class="section-title">What you need to know.</h2>
+      <p class="section-subtitle" style="text-align:center">Straightforward answers to the most common questions about asset-based lending and working with TransCapital.</p>
     </div>
     <div class="faq-list reveal">
 
@@ -3490,7 +3542,7 @@
           <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-answer" style="max-height:200px">
-          <div class="faq-answer-inner" data-editable data-key="faq-answer-1">We work with companies across manufacturing, distribution, government contracting, construction, and cannabis — typically businesses generating $500K to $20M+ in annual revenue that need working capital their bank can't provide.</div>
+          <div class="faq-answer-inner">We work with companies across manufacturing, distribution, government contracting, construction, and cannabis — typically businesses generating $1M to $30M+ in annual revenue that need working capital their bank can't provide.</div>
         </div>
       </div>
 
@@ -3500,7 +3552,7 @@
           <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner" data-editable data-key="faq-answer-2">Most deals close within 2–4 weeks from the initial conversation. In some cases, we've moved faster when urgency required it.</div>
+          <div class="faq-answer-inner">Most deals close within 2–4 weeks from the initial conversation. In some cases, we've moved faster when urgency required it.</div>
         </div>
       </div>
 
@@ -3510,7 +3562,7 @@
           <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner" data-editable data-key="faq-answer-3">We generally work with lines starting at $200K, with no ceiling — larger facilities are structured as needed.</div>
+          <div class="faq-answer-inner">We generally work with lines starting at $200K, with no ceiling — larger facilities are structured as needed.</div>
         </div>
       </div>
 
@@ -3520,7 +3572,7 @@
           <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner" data-editable data-key="faq-answer-4">No. Asset-based lending is collateral-driven, not credit-driven. Lenders focus on the quality of your receivables or inventory, not your balance sheet. That's why companies that don't qualify for bank financing can still get funded.</div>
+          <div class="faq-answer-inner">No. Asset-based lending is collateral-driven, not credit-driven. Lenders focus on the quality of your receivables or inventory, not your balance sheet. That's why companies that don't qualify for bank financing find the flexibility worth the increased cost — with no need to reapply or qualify annually to maintain the line of credit.</div>
         </div>
       </div>
 
@@ -3530,7 +3582,7 @@
           <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner" data-editable data-key="faq-answer-5">Not necessarily. We specialize in non-notification structures, meaning your customers continue paying you directly with no indication that a third-party lender is involved.</div>
+          <div class="faq-answer-inner">Not necessarily. Companies with current financial reporting and a capable back office of billing and AR management qualify for non-notification structures, meaning your customers continue paying you directly with no indication that a third-party lender is involved.</div>
         </div>
       </div>
 
@@ -3541,8 +3593,8 @@
 <!-- ─── CTA BAND ───────────────────────────────────────────────────────────── -->
 <div id="cta-band">
   <div class="cta-band-inner reveal">
-    <div class="section-label" style="color:var(--gold)" data-editable data-key="section-label-11">Ready to Move Forward?</div>
-    <h2 class="section-title" data-editable data-key="section-title-11">Choosing a trusted lending partner can be <em style="font-style:italic;color:var(--gold-light)">expedited with Shannon's help.</em></h2>
+    <div class="section-label" style="color:var(--gold)">Ready to Move Forward?</div>
+    <h2 class="section-title">Choosing a trusted lending partner can be <em style="font-style:italic;color:var(--gold-light)">expedited with Shannon's help.</em></h2>
     <p>There is no obligation, no paperwork upfront, and no pressure. Just an honest conversation about your business and what financing options exist in the market for your profile.</p>
     <div class="cta-band-actions">
       <a href="#contact" class="btn-primary">Request a Free Quote</a>
@@ -3559,9 +3611,9 @@
   <div class="calc-inner">
 
     <div class="calc-header reveal">
-      <div class="section-label" data-editable data-key="section-label-12">AR Financing Calculator</div>
-      <h2 class="section-title" style="color:var(--white)" data-editable data-key="section-title-12">See how much capital your<br><em style="font-style:italic;color:var(--gold-light)">receivables can unlock.</em></h2>
-      <p class="section-subtitle" style="color:rgba(255,255,255,.48);text-align:center;margin:1rem auto 0" data-editable data-key="section-subtitle-9">Estimate your available funding and monthly cost based on your current receivables. All figures are illustrative — contact Shannon for a personalized assessment.</p>
+      <div class="section-label">AR Financing Calculator</div>
+      <h2 class="section-title" style="color:var(--white)">See how much capital your<br><em style="font-style:italic;color:var(--gold-light)">receivables can unlock.</em></h2>
+      <p class="section-subtitle" style="color:rgba(255,255,255,.48);text-align:center;margin:1rem auto 0">Estimate your available funding and monthly cost based on your current receivables. All figures are illustrative — contact Shannon for a personalized assessment.</p>
     </div>
 
     <div class="calc-grid reveal reveal-delay-1">
@@ -3639,7 +3691,7 @@
         </div>
 
         <div class="calc-insight">
-          <p id="calcInsight">With <strong id="calcFundingInline">$425,000</strong> available against your receivables, you could fund production on <strong>2–3 additional orders per month</strong> — without waiting on customer payments.</p>
+          <p id="calcInsight">With <strong id="calcFundingInline">$425,000</strong> available against your receivables, you could fund production on <strong>3–5 additional orders per month</strong> — without waiting on customer payments.</p>
         </div>
 
         <a href="#contact" class="calc-cta-link">
@@ -3659,17 +3711,17 @@
 <section id="contact">
   <div class="contact-inner">
     <div class="contact-left reveal">
-      <div class="section-label" data-editable data-key="section-label-13">Request a Quote</div>
-      <h2 class="section-title" data-editable data-key="section-title-13">Let's find the right structure for your business.</h2>
-      <p class="section-subtitle" data-editable data-key="section-subtitle-10">Shannon personally reviews every inquiry. Tell her about your company and financing needs — she'll respond promptly with an honest assessment.</p>
+      <div class="section-label">Request a Quote</div>
+      <h2 class="section-title">Let's find the right structure for your business.</h2>
+      <p class="section-subtitle">Shannon personally reviews every inquiry. Tell her about your company and financing needs — she'll respond promptly with an honest assessment.</p>
 
       <div class="contact-info-item">
         <div class="contact-info-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.81 19.79 19.79 0 01.06 1.2 2 2 0 012.06 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
         </div>
         <div>
-          <div class="contact-info-label" data-editable data-key="contact-label-1">Phone</div>
-          <div class="contact-info-value" data-editable data-key="contact-value-1"><a href="tel:8584868800">858-486-8800</a></div>
+          <div class="contact-info-label">Phone</div>
+          <div class="contact-info-value"><a href="tel:8584868800">858-486-8800</a></div>
         </div>
       </div>
       <div class="contact-info-item">
@@ -3677,8 +3729,8 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         </div>
         <div>
-          <div class="contact-info-label" data-editable data-key="contact-label-2">Email</div>
-          <div class="contact-info-value" data-editable data-key="contact-value-2"><a href="mailto:shannon@transcapservices.com">shannon@transcapservices.com</a></div>
+          <div class="contact-info-label">Email</div>
+          <div class="contact-info-value"><a href="mailto:shannon@transcapservices.com">shannon@transcapservices.com</a></div>
         </div>
       </div>
       <div class="contact-info-item">
@@ -3686,12 +3738,12 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
         <div>
-          <div class="contact-info-label" data-editable data-key="contact-label-3">Location</div>
-          <div class="contact-info-value" data-editable data-key="contact-value-3">San Diego, California</div>
+          <div class="contact-info-label">Location</div>
+          <div class="contact-info-value">San Diego, California</div>
         </div>
       </div>
 
-      <div class="contact-quote-block" data-editable data-key="contact-quote">
+      <div class="contact-quote-block">
         <p>"Choosing a TRUSTED LENDING PARTNER can be expedited with my help. My goal is to introduce the right decision maker within my network first, with a strong understanding and commitment to your business profile."</p>
       </div>
     </div>
@@ -3717,6 +3769,7 @@
 
         <form id="quoteForm" action="https://formspree.io/f/mzdjylwd" method="POST">
           <input type="hidden" name="_subject" value="New Financing Inquiry — TransCapital" />
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 
           <!-- ── Step 1: Contact Info ──────────────────────────────────────── -->
           <div class="form-step-panel active" id="step1">
@@ -3726,21 +3779,21 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="firstName">First Name *</label>
-                <input type="text" id="firstName" name="firstName" placeholder="First" required />
+                <input type="text" id="firstName" name="firstName" placeholder="First" required autocomplete="given-name" />
               </div>
               <div class="form-group">
                 <label for="lastName">Last Name *</label>
-                <input type="text" id="lastName" name="lastName" placeholder="Last" required />
+                <input type="text" id="lastName" name="lastName" placeholder="Last" required autocomplete="family-name" />
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
                 <label for="email">Email *</label>
-                <input type="email" id="email" name="email" placeholder="your@email.com" required />
+                <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email" />
               </div>
               <div class="form-group">
                 <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" />
+                <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" autocomplete="tel" />
               </div>
             </div>
 
@@ -3866,6 +3919,10 @@
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </button>
             </div>
+            <p class="form-privacy-note">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+              Your information is kept strictly confidential and never shared with third parties. <a href="#privacy" style="color:var(--gold);text-decoration:underline;text-underline-offset:2px">Privacy Policy</a>
+            </p>
           </div>
 
         </form>
@@ -3892,9 +3949,9 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div>
-        <div class="footer-logo" data-editable data-key="footer-logo">TransCapital, Inc.</div>
-        <div class="footer-logo-sub" data-editable data-key="footer-logo-sub">Asset Based Lending · San Diego, CA</div>
-        <p class="footer-desc" data-editable data-key="footer-desc">Connecting growing businesses with discreet, flexible lending partners for over 25 years. When banks say no, Shannon finds a way.</p>
+        <div class="footer-logo">TransCapital, Inc.</div>
+        <div class="footer-logo-sub">Asset Based Lending · San Diego, CA</div>
+        <p class="footer-desc">Connecting growing businesses with discreet, flexible lending partners for over 25 years. When banks say no, Shannon finds a way.</p>
         <div class="footer-contact-links">
           <a href="tel:8584868800" class="footer-contact-link">858-486-8800</a>
           <a href="mailto:shannon@transcapservices.com" class="footer-contact-link">shannon@transcapservices.com</a>
@@ -3906,6 +3963,7 @@
           <li><a href="#services">Asset Based Lending</a></li>
           <li><a href="#services">Contract Financing</a></li>
           <li><a href="#services">Purchase Order Finance</a></li>
+          <li><a href="#services">Materials Financing</a></li>
         </ul>
       </div>
       <div>
@@ -3920,11 +3978,51 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© <span id="copyright-year">2025</span> TransCapital, Inc. All rights reserved.</div>
+      <div class="footer-copy">© <span id="copyright-year">2026</span> TransCapital, Inc. All rights reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="#privacy">Privacy Policy</a>
+      </div>
       <div class="footer-disclaimer">TransCapital, Inc. is a financing intermediary and does not directly lend funds. All lending decisions are made by third-party lenders.</div>
     </div>
   </div>
 </footer>
+
+<!-- ─── PRIVACY POLICY ─────────────────────────────────────────────────────── -->
+<section id="privacy">
+  <div class="privacy-inner">
+    <h2 class="serif">Privacy Policy</h2>
+    <span class="privacy-date">Effective June 2026</span>
+
+    <p>TransCapital, Inc. ("TransCapital," "we," "us," or "our") operates the website at transcapservices.com. This policy explains what information we collect when you visit our site or submit an inquiry, how we use it, and your rights as a California resident under the California Consumer Privacy Act (CCPA).</p>
+
+    <h3>Information We Collect</h3>
+    <p>When you submit the contact form on this site, we collect the information you provide, which may include:</p>
+    <ul>
+      <li>Your name, email address, and phone number</li>
+      <li>Your company name, industry, and annual revenue range</li>
+      <li>The type of financing you are seeking and any message you include</li>
+    </ul>
+    <p>We do not collect this information automatically — it is only collected when you voluntarily submit the form. We do not use cookies for tracking or advertising, and we do not use third-party analytics that collect personal data.</p>
+
+    <h3>How We Use Your Information</h3>
+    <p>The information you submit is used solely to:</p>
+    <ul>
+      <li>Respond to your financing inquiry</li>
+      <li>Assess whether your business profile matches our lending network</li>
+      <li>Follow up with you directly by phone or email</li>
+    </ul>
+    <p>We do not sell, rent, or share your personal information with any third party for marketing purposes. Your information may be shared with a prospective lender only with your knowledge and as part of the financing process you initiated.</p>
+
+    <h3>Data Security</h3>
+    <p>Form submissions are transmitted securely via Formspree (formspree.io), a trusted third-party form processing service that uses industry-standard encryption. We retain your inquiry information only as long as necessary to service your request.</p>
+
+    <h3>Your California Privacy Rights (CCPA)</h3>
+    <p>As a California resident, you have the right to request disclosure of the personal information we hold about you, request deletion of your personal information, and opt out of the sale of your personal information (we do not sell personal information). To exercise these rights, contact us at <a href="mailto:shannon@transcapservices.com" style="color:var(--gold)">shannon@transcapservices.com</a> or call <a href="tel:8584868800" style="color:var(--gold)">858-486-8800</a>.</p>
+
+    <h3>Contact</h3>
+    <p>TransCapital, Inc. &nbsp;·&nbsp; San Diego, California &nbsp;·&nbsp; <a href="mailto:shannon@transcapservices.com" style="color:var(--gold)">shannon@transcapservices.com</a> &nbsp;·&nbsp; <a href="tel:8584868800" style="color:var(--gold)">858-486-8800</a></p>
+  </div>
+</section>
 
 <!-- ─── JAVASCRIPT ─────────────────────────────────────────────────────────── -->
 <script>
@@ -4012,35 +4110,6 @@ document.querySelectorAll('.faq-question').forEach(btn => {
   });
 });
 
-/* ── EmailJS — Confirmation Email ────────────────────────────────────────── */
-// SETUP INSTRUCTIONS (one-time):
-//   1. Sign up free at https://www.emailjs.com
-//   2. Add an Email Service (Gmail recommended) → copy the Service ID below
-//   3. Create a new Email Template → copy the Template ID below
-//      Template variables available: {{to_name}}, {{to_email}}, {{company}},
-//                                    {{programs}}, {{line_amount}}, {{message}}
-//      Suggested Subject: "We received your TransCapital inquiry, {{to_name}}"
-//   4. Go to Account → General → copy your Public Key below
-const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';   // ← paste here
-const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';   // ← paste here
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // ← paste here
-
-const emailjsReady = EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY';
-if (emailjsReady) emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
-
-function sendConfirmationEmail(data) {
-  if (!emailjsReady) return;
-  const programs = data.getAll('programs');
-  emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-    to_name:     data.get('firstName'),
-    to_email:    data.get('email'),
-    company:     data.get('company')    || 'your company',
-    programs:    programs.length ? programs.join(', ') : 'Not specified',
-    line_amount: data.get('lineAmount') || 'Not specified',
-    message:     data.get('message')    || '',
-  });
-}
-
 /* ── Contact Form (Formspree async) ──────────────────────────────────────── */
 const form = document.getElementById('quoteForm');
 if (form) {
@@ -4058,7 +4127,6 @@ if (form) {
         headers: { 'Accept': 'application/json' }
       });
       if (res.ok) {
-        sendConfirmationEmail(formData);
         form.style.display = 'none';
         const success = document.getElementById('formSuccess');
         success.style.display = 'block';
@@ -4272,85 +4340,6 @@ function handleProgramChange() {
     Call Shannon — 858-486-8800
   </a>
 </div>
-
-<script id="editor-script">
-(function(){
-  var STORE='tc_edits_v3', editing=false;
-
-  function loadEdits(){
-    try {
-      var saved=JSON.parse(localStorage.getItem(STORE)||'{}');
-      document.querySelectorAll('[data-editable]').forEach(function(el){
-        if(saved[el.dataset.key]!==undefined) el.innerHTML=saved[el.dataset.key];
-      });
-    }catch(e){}
-  }
-
-  function storeEdits(){
-    var d={};
-    document.querySelectorAll('[data-editable]').forEach(function(el){ d[el.dataset.key]=el.innerHTML; });
-    try{ localStorage.setItem(STORE,JSON.stringify(d)); }catch(e){}
-  }
-
-  function showStatus(msg,color){
-    var s=document.getElementById('editor-status');
-    s.textContent=msg; s.style.color=color||'rgba(255,255,255,.8)';
-    clearTimeout(window._stTimer);
-    window._stTimer=setTimeout(function(){ s.textContent=''; },3500);
-  }
-
-  window.tcToggleEdit=function(){
-    editing=!editing;
-    document.body.classList.toggle('edit-mode',editing);
-    var btn=document.getElementById('btn-edit-toggle');
-    document.querySelectorAll('[data-editable]').forEach(function(el){
-      el.contentEditable=editing?'true':'false';
-      if(editing) el.spellcheck=false;
-    });
-    if(editing){
-      btn.innerHTML='&#10005;&nbsp;&nbsp;Done Editing';
-      btn.classList.add('editing');
-      showStatus('Click any gold border to edit','#c8a456');
-    } else {
-      btn.innerHTML='&#9998;&nbsp;&nbsp;Edit Page';
-      btn.classList.remove('editing');
-      storeEdits();
-      showStatus('All changes saved ✓','#27ae60');
-    }
-  };
-
-  document.addEventListener('input',function(e){
-    if(e.target&&e.target.hasAttribute('data-editable')){
-      storeEdits();
-      showStatus('Saved ✓','#27ae60');
-    }
-  });
-
-  window.tcSaveFile=function(){
-    storeEdits();
-    var clone=document.documentElement.cloneNode(true);
-    ['editor-toolbar','editor-styles','editor-script'].forEach(function(id){
-      var el=clone.querySelector('#'+id); if(el) el.remove();
-    });
-    clone.querySelector('body').classList.remove('edit-mode');
-    clone.querySelector('body').style.paddingTop='';
-    clone.querySelectorAll('[contenteditable]').forEach(function(el){
-      el.removeAttribute('contenteditable'); el.removeAttribute('spellcheck');
-    });
-    var out='<!DOCTYPE html>\n'+clone.outerHTML;
-    var blob=new Blob([out],{type:'text/html;charset=utf-8'});
-    var a=document.createElement('a');
-    a.href=URL.createObjectURL(blob); a.download='index.html';
-    document.body.appendChild(a); a.click(); document.body.removeChild(a);
-    setTimeout(function(){ URL.revokeObjectURL(a.href); },1000);
-    showStatus('Downloaded! Send to Craig 📁','#c8a456');
-  };
-
-  if(document.readyState==='loading'){
-    document.addEventListener('DOMContentLoaded',loadEdits);
-  } else { loadEdits(); }
-})();
-</script>
 
 </body>
 </html>
