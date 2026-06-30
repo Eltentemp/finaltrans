@@ -11,15 +11,23 @@
   <meta property="og:description" content="Shannon Shular connects growing San Diego businesses with trusted asset-based lenders. AR lines, contract financing, and PO finance up to $10M. 25+ years experience." />
   <meta property="og:url"         content="https://transcapservices.com" />
   <meta property="og:site_name"   content="TransCapital, Inc." />
-  <meta name="twitter:card"        content="summary" />
+  <meta property="og:image"       content="https://transcapservices.com/og-image.jpg" />
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:image"       content="https://transcapservices.com/og-image.jpg" />
   <meta name="twitter:title"       content="TransCapital, Inc. — Asset Based Lending | San Diego" />
   <meta name="twitter:description" content="Shannon Shular connects San Diego businesses with trusted asset-based lenders. 25+ years. Lines $200K–$10M. Discreet, flexible, collateral-driven." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
 
-  <!-- Google Analytics 4 — paste your real snippet here when ready -->
-  <!-- Get it from: analytics.google.com → Admin → Data Streams → your stream → "View tag instructions" -->
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C3FEJ6G47Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-C3FEJ6G47Y');
+  </script>
 
   <script type="application/ld+json">
   {
@@ -2202,8 +2210,16 @@
     ============================================================ */
     #privacy {
       background: var(--navy);
-      padding: 72px 2rem;
       border-top: 1px solid rgba(200,164,86,.12);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .5s ease, padding .5s ease;
+      padding: 0 2rem;
+    }
+
+    #privacy.open {
+      max-height: 2000px;
+      padding: 72px 2rem;
     }
 
     .privacy-inner {
@@ -2918,8 +2934,6 @@
       line-height: 1.5;
     }
   </style>
-  <!-- EmailJS — sends confirmation email directly to the submitter -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -2996,7 +3010,7 @@
         <div class="hero-stat-label">Maximum Line Size</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-value">25+</div>
+        <div class="hero-stat-value">30+</div>
         <div class="hero-stat-label">Trusted Lender Partners</div>
       </div>
       <div class="hero-stat">
@@ -3012,17 +3026,17 @@
   <div class="trust-band-inner">
     <div class="trust-item">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-      Founded 1995
-    </div>
-    <span class="trust-sep">·</span>
-    <div class="trust-item">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-      25+ Years Experience
+      In Business Since 1995
     </div>
     <span class="trust-sep">·</span>
     <div class="trust-item">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
       Lines $200K – $10M
+    </div>
+    <span class="trust-sep">·</span>
+    <div class="trust-item">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      25+ Years Experience
     </div>
     <span class="trust-sep">·</span>
     <div class="trust-item">
@@ -3276,7 +3290,7 @@
     <div class="testimonials-featured-bottom reveal">
       <div class="testi-card">
         <div class="testi-quote-mark">"</div>
-        <div class="testi-badge">📈 +$3.5M Revenue Growth</div>
+        <div class="testi-badge">+$3.5M Revenue Growth</div>
         <p class="testi-text">A great deal of our growth is in part to asset based lending — we have added three new clients increasing our sales by $3.5M. Not to mention two of our key suppliers have increased our credit limits and terms since paying more promptly. Our clients demand competitive pricing and credit of up to 75 days. The lender you introduced is responsible for us meeting these goals. Thank you Shannon for everything.</p>
         <div class="testi-meta">
           <div class="testi-name">Jorge Culebro</div>
@@ -3285,7 +3299,7 @@
       </div>
       <div class="testi-card">
         <div class="testi-quote-mark">"</div>
-        <div class="testi-badge">🤝 Client since 1999</div>
+        <div class="testi-badge">Client since 1999</div>
         <p class="testi-text">Ms. Shannon Shular and TransCapital have been helping us with financing for working capital since 1999. What I appreciate the most is that she understands our requirements fully and then presents the plan. She does not just find a suitable lender — she follows our application with their underwriting team all the way through, and that makes a world of difference. Despite her busy schedule, she schedules regular meetings and stays committed to the process.</p>
         <div class="testi-meta">
           <div class="testi-name">Ash Shah</div>
@@ -3294,7 +3308,7 @@
       </div>
       <div class="testi-card">
         <div class="testi-quote-mark">"</div>
-        <div class="testi-badge">📈 +30% Revenue Growth</div>
+        <div class="testi-badge">+30% Revenue Growth</div>
         <p class="testi-text">Shannon introduced a finance company to support our production expenses on large orders to Home Depot when the banks said no. Our 2015 sales revenue increased by over 30% and I continue to draw on the loan to confidently fund my company.</p>
         <div class="testi-meta">
           <div class="testi-name">David Martinez</div>
@@ -3769,6 +3783,7 @@
 
         <form id="quoteForm" action="https://formspree.io/f/mzdjylwd" method="POST">
           <input type="hidden" name="_subject" value="New Financing Inquiry — TransCapital" />
+          <input type="hidden" name="_replyto" id="replyToField" value="" />
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 
           <!-- ── Step 1: Contact Info ──────────────────────────────────────── -->
@@ -3779,21 +3794,21 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="firstName">First Name *</label>
-                <input type="text" id="firstName" name="firstName" placeholder="First" required autocomplete="given-name" />
+                <input type="text" id="firstName" name="First Name" placeholder="First" required autocomplete="given-name" />
               </div>
               <div class="form-group">
                 <label for="lastName">Last Name *</label>
-                <input type="text" id="lastName" name="lastName" placeholder="Last" required autocomplete="family-name" />
+                <input type="text" id="lastName" name="Last Name" placeholder="Last" required autocomplete="family-name" />
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
                 <label for="email">Email *</label>
-                <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email" />
+                <input type="email" id="email" name="Email" placeholder="your@email.com" required autocomplete="email" />
               </div>
               <div class="form-group">
                 <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" autocomplete="tel" />
+                <input type="tel" id="phone" name="Phone" placeholder="(000) 000-0000" autocomplete="tel" />
               </div>
             </div>
 
@@ -3813,11 +3828,11 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="company">Company Name</label>
-                <input type="text" id="company" name="company" placeholder="Your Business" />
+                <input type="text" id="company" name="Company Name" placeholder="Your Business" />
               </div>
               <div class="form-group">
                 <label for="industry">Industry</label>
-                <select id="industry" name="industry" onchange="handleIndustryChange(this.value)">
+                <select id="industry" name="Industry" onchange="handleIndustryChange(this.value)">
                   <option value="" disabled selected>Select industry</option>
                   <option>Manufacturing</option>
                   <option>Distribution &amp; Wholesale</option>
@@ -3836,12 +3851,12 @@
             <!-- Conditional: Government Contracting -->
             <div class="form-group conditional-field" id="fieldGovContract">
               <label for="agencyContract">Agency / Contract Name</label>
-              <input type="text" id="agencyContract" name="agencyContract" placeholder="e.g. Department of Defense, GSA Schedule" />
+              <input type="text" id="agencyContract" name="Agency / Contract" placeholder="e.g. Department of Defense, GSA Schedule" />
             </div>
 
             <div class="form-group">
               <label for="annualRevenue">Annual Revenue</label>
-              <select id="annualRevenue" name="annualRevenue">
+              <select id="annualRevenue" name="Annual Revenue">
                 <option value="" disabled selected>Select range</option>
                 <option>Under $500,000</option>
                 <option>$500,000 – $1,000,000</option>
@@ -3856,19 +3871,19 @@
               <label>Programs of Interest</label>
               <div class="checkbox-group">
                 <label class="checkbox-item">
-                  <input type="checkbox" name="programs" value="Asset Based Lending" onchange="handleProgramChange()" />
+                  <input type="checkbox" name="Programs of Interest" value="Asset Based Lending" onchange="handleProgramChange()" />
                   <span>Asset Based Lending</span>
                 </label>
                 <label class="checkbox-item">
-                  <input type="checkbox" name="programs" value="Contract Financing" />
+                  <input type="checkbox" name="Programs of Interest" value="Contract Financing" />
                   <span>Contract Financing</span>
                 </label>
                 <label class="checkbox-item">
-                  <input type="checkbox" name="programs" value="Purchase Order Finance" />
+                  <input type="checkbox" name="Programs of Interest" value="Purchase Order Finance" />
                   <span>Purchase Order Finance</span>
                 </label>
                 <label class="checkbox-item">
-                  <input type="checkbox" name="programs" value="Cannabis Financing" />
+                  <input type="checkbox" name="Programs of Interest" value="Cannabis Financing" />
                   <span>Cannabis Financing</span>
                 </label>
               </div>
@@ -3877,7 +3892,7 @@
             <!-- Conditional: Asset Based Lending -->
             <div class="form-group conditional-field" id="fieldMonthlyAR">
               <label for="monthlyAR">Monthly AR Volume</label>
-              <input type="text" id="monthlyAR" name="monthlyAR" placeholder="e.g. $250,000" />
+              <input type="text" id="monthlyAR" name="Monthly AR Volume" placeholder="e.g. $250,000" />
             </div>
 
             <div class="form-step-nav">
@@ -3896,7 +3911,7 @@
 
             <div class="form-group">
               <label for="lineAmount">Approximate Line Amount Needed</label>
-              <select id="lineAmount" name="lineAmount">
+              <select id="lineAmount" name="Line Amount Needed">
                 <option value="" disabled selected>Select range</option>
                 <option>$200,000 – $500,000</option>
                 <option>$500,000 – $1,000,000</option>
@@ -3909,7 +3924,7 @@
 
             <div class="form-group">
               <label for="message">Brief Summary of Financing Request</label>
-              <textarea id="message" name="message" placeholder="Tell Shannon about your business, your current situation, and what you're looking to accomplish..."></textarea>
+              <textarea id="message" name="Message" placeholder="Tell Shannon about your business, your current situation, and what you're looking to accomplish..."></textarea>
             </div>
 
             <div class="form-step-nav">
@@ -3921,7 +3936,7 @@
             </div>
             <p class="form-privacy-note">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-              Your information is kept strictly confidential and never shared with third parties. <a href="#privacy" style="color:var(--gold);text-decoration:underline;text-underline-offset:2px">Privacy Policy</a>
+              Your information is kept strictly confidential and never shared with third parties. <a href="#privacy" style="color:var(--gold);text-decoration:underline;text-underline-offset:2px" onclick="const p=document.getElementById('privacy');p.classList.add('open');event.preventDefault();p.scrollIntoView({behavior:'smooth'})">Privacy Policy</a>
             </p>
           </div>
 
@@ -3980,7 +3995,7 @@
     <div class="footer-bottom">
       <div class="footer-copy">© <span id="copyright-year">2026</span> TransCapital, Inc. All rights reserved.</div>
       <div class="footer-bottom-links">
-        <a href="#privacy">Privacy Policy</a>
+        <a href="#privacy" onclick="const p=document.getElementById('privacy');p.classList.toggle('open');event.preventDefault();p.scrollIntoView({behavior:'smooth'})">Privacy Policy</a>
       </div>
       <div class="footer-disclaimer">TransCapital, Inc. is a financing intermediary and does not directly lend funds. All lending decisions are made by third-party lenders.</div>
     </div>
@@ -4119,6 +4134,7 @@ if (form) {
     const originalHTML = btn.innerHTML;
     btn.innerHTML = 'Sending&hellip;';
     btn.disabled = true;
+    document.getElementById('replyToField').value = document.getElementById('email').value;
     const formData = new FormData(form);
     try {
       const res = await fetch(form.action, {
@@ -4221,6 +4237,18 @@ if (form) {
 })();
 
 /* ── Multi-step Form ──────────────────────────────────────────────────────── */
+/* Prevent Enter key from submitting — advance step instead */
+const quoteForm = document.getElementById('quoteForm');
+if (quoteForm) {
+  quoteForm.addEventListener('keydown', function(e) {
+    if (e.key !== 'Enter') return;
+    const active = quoteForm.querySelector('.form-step-panel.active');
+    if (!active) return;
+    if (active.id === 'step1') { e.preventDefault(); nextStep(1); }
+    else if (active.id === 'step2') { e.preventDefault(); nextStep(2); }
+    else if (active.id === 'step3') { e.preventDefault(); }
+  });
+}
 function updateStepIndicator(step) {
   document.querySelectorAll('.form-step-dot').forEach(function (dot, i) {
     const n = i + 1;
