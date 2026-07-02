@@ -2229,7 +2229,7 @@
     /* ============================================================
        PRIVACY POLICY
     ============================================================ */
-    #privacy {
+    #privacy, #terms, #disclaimer, #accessibility {
       background: var(--navy);
       border-top: 1px solid rgba(200,164,86,.12);
       max-height: 0;
@@ -2238,8 +2238,8 @@
       padding: 0 2rem;
     }
 
-    #privacy.open {
-      max-height: 2000px;
+    #privacy.open, #terms.open, #disclaimer.open, #accessibility.open {
+      max-height: 3000px;
       padding: 72px 2rem;
     }
 
@@ -2423,6 +2423,7 @@
       .footer-top { grid-template-columns: 1fr; }
       .footer-top > *:first-child { grid-column: auto; }
       .footer-bottom { flex-direction: column; gap: 1rem; }
+      .footer-bottom-links { flex-wrap: wrap; justify-content: center; gap: .5rem 1.2rem; }
     }
 
     @media (max-width: 480px) {
@@ -3957,7 +3958,7 @@
             </div>
             <p class="form-privacy-note">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-              Your information is kept strictly confidential and never shared with third parties. <a href="#privacy" style="color:var(--gold);text-decoration:underline;text-underline-offset:2px" onclick="const p=document.getElementById('privacy');p.classList.add('open');event.preventDefault();p.scrollIntoView({behavior:'smooth'})">Privacy Policy</a>
+              Your information is kept strictly confidential and never shared with third parties. <a href="#privacy" style="color:var(--gold);text-decoration:underline;text-underline-offset:2px" onclick="toggleLegal('privacy');return false;">Privacy Policy</a>
             </p>
           </div>
 
@@ -4016,7 +4017,10 @@
     <div class="footer-bottom">
       <div class="footer-copy">© <span id="copyright-year">2026</span> TransCapital, Inc. All rights reserved.</div>
       <div class="footer-bottom-links">
-        <a href="#privacy" onclick="const p=document.getElementById('privacy');p.classList.toggle('open');event.preventDefault();p.scrollIntoView({behavior:'smooth'})">Privacy Policy</a>
+        <a href="#privacy" onclick="toggleLegal('privacy');return false;">Privacy Policy</a>
+        <a href="#terms" onclick="toggleLegal('terms');return false;">Terms of Use</a>
+        <a href="#disclaimer" onclick="toggleLegal('disclaimer');return false;">Disclaimer</a>
+        <a href="#accessibility" onclick="toggleLegal('accessibility');return false;">Accessibility</a>
       </div>
       <div class="footer-disclaimer">TransCapital, Inc. is a financing intermediary and does not directly lend funds. All lending decisions are made by third-party lenders.</div>
     </div>
@@ -4055,6 +4059,97 @@
     <h3>Your California Privacy Rights (CCPA)</h3>
     <p>As a California resident, you have the right to request disclosure of the personal information we hold about you, request deletion of your personal information, and opt out of the sale of your personal information (we do not sell personal information). To exercise these rights, contact us at <a href="mailto:shannon@transcapservices.com" style="color:var(--gold)">shannon@transcapservices.com</a> or call <a href="tel:8584868800" style="color:var(--gold)">858-486-8800</a>.</p>
 
+    <h3>Use of AI Tools</h3>
+    <p>Portions of the content, design, and copy on this website were developed with the assistance of artificial intelligence tools. All content has been reviewed, edited, and approved by TransCapital, Inc. prior to publication. AI-generated content does not represent legal, financial, or investment advice.</p>
+
+    <h3>Contact</h3>
+    <p>TransCapital, Inc. &nbsp;·&nbsp; San Diego, California &nbsp;·&nbsp; <a href="mailto:shannon@transcapservices.com" style="color:var(--gold)">shannon@transcapservices.com</a> &nbsp;·&nbsp; <a href="tel:8584868800" style="color:var(--gold)">858-486-8800</a></p>
+  </div>
+</section>
+
+<!-- ─── TERMS OF USE ────────────────────────────────────────────────────────── -->
+<section id="terms">
+  <div class="privacy-inner">
+    <h2 class="serif">Terms of Use</h2>
+    <span class="privacy-date">Effective June 2026</span>
+
+    <p>By accessing or using the website at transcapservices.com (the "Site"), you agree to be bound by these Terms of Use. If you do not agree, please do not use the Site.</p>
+
+    <h3>Use of This Site</h3>
+    <p>This Site is provided for informational purposes only. You may use it solely to learn about TransCapital, Inc. and to submit financing inquiries. You agree not to use this Site for any unlawful purpose, to transmit harmful or deceptive content, or to attempt to gain unauthorized access to any portion of the Site.</p>
+
+    <h3>No Professional Advice</h3>
+    <p>Nothing on this Site constitutes financial, legal, tax, or investment advice. All information is general in nature. You should consult a licensed professional before making any financial decisions. Submitting an inquiry does not create a client, advisory, or fiduciary relationship of any kind.</p>
+
+    <h3>Intellectual Property</h3>
+    <p>All content on this Site, including text, graphics, logos, and design, is the property of TransCapital, Inc. and is protected by applicable copyright and trademark laws. You may not reproduce, distribute, or create derivative works without prior written permission.</p>
+
+    <h3>Use of AI-Assisted Content</h3>
+    <p>Portions of this Site's content were developed with the assistance of artificial intelligence tools. All content has been reviewed and approved by TransCapital, Inc. TransCapital, Inc. takes full responsibility for the accuracy and appropriateness of all content published on this Site.</p>
+
+    <h3>Third-Party Services</h3>
+    <p>This Site uses third-party services including Formspree for form processing and Google Analytics for anonymous traffic measurement. Use of these services is subject to their respective terms and privacy policies. TransCapital, Inc. is not responsible for the practices of these third parties.</p>
+
+    <h3>Limitation of Liability</h3>
+    <p>TransCapital, Inc. makes no warranties, express or implied, regarding the accuracy, completeness, or availability of information on this Site. To the fullest extent permitted by law, TransCapital, Inc. shall not be liable for any damages arising from your use of or reliance on this Site.</p>
+
+    <h3>Changes to These Terms</h3>
+    <p>We may update these Terms of Use at any time. Continued use of the Site after changes are posted constitutes your acceptance of the revised terms.</p>
+
+    <h3>Contact</h3>
+    <p>TransCapital, Inc. &nbsp;·&nbsp; San Diego, California &nbsp;·&nbsp; <a href="mailto:shannon@transcapservices.com" style="color:var(--gold)">shannon@transcapservices.com</a> &nbsp;·&nbsp; <a href="tel:8584868800" style="color:var(--gold)">858-486-8800</a></p>
+  </div>
+</section>
+
+<!-- ─── FINANCIAL DISCLAIMER ─────────────────────────────────────────────────── -->
+<section id="disclaimer">
+  <div class="privacy-inner">
+    <h2 class="serif">Financial Disclaimer</h2>
+    <span class="privacy-date">Effective June 2026</span>
+
+    <p>TransCapital, Inc. is a financing intermediary and broker. We do not directly lend money, make credit decisions, or guarantee funding of any kind. All lending decisions are made exclusively by independent third-party lenders within our network.</p>
+
+    <h3>No Guarantee of Funding</h3>
+    <p>Submitting an inquiry through this Site does not guarantee that financing will be arranged. Approval, terms, rates, and availability of financing depend entirely on the policies and credit decisions of individual lenders. Results will vary based on your business profile, collateral, industry, and other factors.</p>
+
+    <h3>Not a Licensed Lender</h3>
+    <p>TransCapital, Inc. does not hold a lending license. We act solely as an intermediary connecting businesses with third-party lenders who hold appropriate licenses in their respective jurisdictions. Any financing arranged is a direct agreement between you and the lender.</p>
+
+    <h3>No Financial or Legal Advice</h3>
+    <p>Nothing on this Site or communicated by TransCapital, Inc. constitutes financial advice, legal advice, tax guidance, or investment recommendations. You should seek independent professional counsel before entering into any financing arrangement.</p>
+
+    <h3>Rates and Terms</h3>
+    <p>Any rates, fees, or terms referenced on this Site are illustrative only and are not offers of credit. Actual rates and terms are determined by the lender and will be disclosed to you in a formal agreement prior to funding.</p>
+
+    <h3>Contact</h3>
+    <p>TransCapital, Inc. &nbsp;·&nbsp; San Diego, California &nbsp;·&nbsp; <a href="mailto:shannon@transcapservices.com" style="color:var(--gold)">shannon@transcapservices.com</a> &nbsp;·&nbsp; <a href="tel:8584868800" style="color:var(--gold)">858-486-8800</a></p>
+  </div>
+</section>
+
+<!-- ─── ACCESSIBILITY ─────────────────────────────────────────────────────────── -->
+<section id="accessibility">
+  <div class="privacy-inner">
+    <h2 class="serif">Accessibility Statement</h2>
+    <span class="privacy-date">Effective June 2026</span>
+
+    <p>TransCapital, Inc. is committed to ensuring that this website is accessible to all visitors, including those with disabilities. We strive to meet or exceed the requirements of the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA.</p>
+
+    <h3>Our Efforts</h3>
+    <ul>
+      <li>Semantic HTML structure with appropriate heading hierarchy</li>
+      <li>Descriptive alt text on all meaningful images</li>
+      <li>Sufficient color contrast between text and backgrounds</li>
+      <li>Keyboard-navigable interface including forms and navigation</li>
+      <li>Responsive design that works across all screen sizes and devices</li>
+      <li>Form labels and error messages that are clear and descriptive</li>
+    </ul>
+
+    <h3>Known Limitations</h3>
+    <p>We are continuously working to improve accessibility across the Site. If you encounter any barriers or have difficulty accessing any content, please contact us and we will make every effort to provide the information in an accessible format.</p>
+
+    <h3>Feedback and Assistance</h3>
+    <p>If you experience any difficulty accessing content on this Site or have suggestions for improvement, please contact us at <a href="mailto:shannon@transcapservices.com" style="color:var(--gold)">shannon@transcapservices.com</a> or call <a href="tel:8584868800" style="color:var(--gold)">858-486-8800</a>. We aim to respond to accessibility requests within 2 business days.</p>
+
     <h3>Contact</h3>
     <p>TransCapital, Inc. &nbsp;·&nbsp; San Diego, California &nbsp;·&nbsp; <a href="mailto:shannon@transcapservices.com" style="color:var(--gold)">shannon@transcapservices.com</a> &nbsp;·&nbsp; <a href="tel:8584868800" style="color:var(--gold)">858-486-8800</a></p>
   </div>
@@ -4062,6 +4157,18 @@
 
 <!-- ─── JAVASCRIPT ─────────────────────────────────────────────────────────── -->
 <script>
+/* ── Legal Section Toggle ───────────────────────────────────────────────── */
+function toggleLegal(id) {
+  const all = ['privacy','terms','disclaimer','accessibility'];
+  const el = document.getElementById(id);
+  const isOpen = el.classList.contains('open');
+  all.forEach(s => document.getElementById(s).classList.remove('open'));
+  if (!isOpen) {
+    el.classList.add('open');
+    setTimeout(() => el.scrollIntoView({behavior:'smooth'}), 50);
+  }
+}
+
 /* ── Copyright Year ────────────────────────────────────────────────────── */
 const yearEl = document.getElementById('copyright-year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
